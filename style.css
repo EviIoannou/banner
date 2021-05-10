@@ -61,6 +61,13 @@
     text-align: center;
 }
 
+.banner-320 .logo {
+    width: 320px;
+}
+
+.banner-640 .logo {
+    width: 640px;
+}
 .model-viewer{
     background-color: rgba(236, 226, 215, 0.8);
     border-radius: 3em;
@@ -80,4 +87,12 @@
 .icon-3D {
     color: wheat;
     height: 24px;
+}
+
+@media only screen and (max-width: 1010px) {
+    .banners {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
