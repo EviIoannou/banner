@@ -1,53 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
     <title>Banner</title>
 </head>
+
 <body>
-    <div class="banners">
-        <div class="banner-320">
-            <div class="logo"><img src="./plantagen.svg" alt="logo"></div>
-            <div class="banner-320-details">
-                <model-viewer
-                src="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
-                auto-rotate
-                camera-controls
-                camera-orbit="0deg 75deg 70%"
-                class="model-viewer"
-                id="mobile"
-              ></model-viewer>
-                <button class="AR-btn charpstarARViewer" onclick="activateAR(this)" src="https://charpstar.se/AR.svg" data-desktopqr data-androidsrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb" data-iossrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
-                    <div class="button-content">
-                        <p class="text">Se i Augmented Reality</p> 
-                        <p><img src="./view_in_ar.svg" alt="3D" class="icon-3D"></p> 
-                    </div> 
-                </button>
+    <div class="wrapper">
+        <div class="instructions">
+            <div class="heading">
+                <h2 class="demo-title">AR that works on Android and iOS Devices!</h2>
+                <p>Note : GLB and USDZ links have to be served through https protocol</p>
             </div>
+
+
+            <example-snippet stamp-to="demo-container-2" highlight-as="html">
+                <h4>Include the Charpstar AR Script</h4>
+                <p>The script is very small (~8KB Size) and tells the browser to open the AR links in their respective
+                    default applications and additionally does AR Support Checks</p>
+                <template>
+                    <script src="https://cdn.jsdelivr.net/gh/charpstar/InPlace/charpstar-viewer.js"></script>
+
+                </template>
+                <pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/gh/charpstar/InPlace/charpstar-viewer.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+            </example-snippet>
+
+            <example-snippet stamp-to="demo-container-2" highlight-as="html">
+                <h4>Include the AR Code inside an AR Badge Image or Button element</h4>
+                <ul>
+                    <li>
+                        <p>The Image (Which can be anything like an AR Icon/Badge) or Button acts as the activation
+                            element
+                            for the AR experience. You can style this however you want</p>
+                    </li>
+                    <li>
+                        <p>We hide the element (Not in this demo) on unsupported devices and browsers with our script by
+                            selecting its class property "charpstarARViewer" </p>
+                    </li>
+                    <li>
+                        <p>The 'data-androidSrc' and 'data-iosSrc' attributes should contain the links to the GLB and
+                            USDZ
+                            links that we will provide you</p>
+                    </li>
+                    <li>
+                        <p>The 'data-desktopQR' attribute enables a direct QR Link to the AR model and makes the AR
+                            Button
+                            visible on desktops. Remove this if you don't need this feature</p>
+                    </li>
+                </ul>
+                <!-- <template>
+                    <img class="charpstarARViewer" onclick="activateAR(this)" src="https://charpstar.se/AR.svg"
+                        data-desktopqr="" data-androidsrc="https://charpstar.se/InPlace/Demos/ClasOhlson/ClasOhlson.glb"
+                        data-iossrc="https://charpstar.se/InPlace/Demos/ClasOhlson/ClasOhlson.usdz">
+                </template> -->
+                <pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>charpstarARViewer<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>activateAR(this)<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://charpstar.se/AR.svg<span class="token punctuation">"</span></span> <span class="token attr-name">data-desktopqr</span> <span class="token attr-name">data-androidsrc</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://charpstar.se/InPlace/Demos/ClasOhlson/ClasOhlson.glb<span class="token punctuation">"</span></span> <span class="token attr-name">data-iossrc</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://charpstar.se/InPlace/Demos/ClasOhlson/ClasOhlson.usdz<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+            </example-snippet>
         </div>
-        
-        <div class="banner-640">
-            <div class="logo"><img src="./plantagen.svg" alt="logo"></div>
-            <div class="banner-640-details">
-                <model-viewer
-                src="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
-                auto-rotate
-                camera-controls
-                camera-orbit="0deg 75deg 60%"
-                class="model-viewer"
-                id="large"
-              ></model-viewer>
-                <button class="AR-btn charpstarARViewer" onclick="activateAR(this)" src="https://charpstar.se/AR.svg" data-desktopqr data-androidsrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb" data-iossrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
-                    <div class="button-content">
-                        <p class="text">Se i Augmented Reality</p> 
-                        <p><img src="./view_in_ar.svg" alt="3D" class="icon-3D"></p> 
-                    </div> 
-                </button>
+
+
+
+        <div class="banners">
+            <div class="banner-320">
+                <div class="logo"><img src="./plantagen.svg" alt="logo"></div>
+                <div class="banner-320-details">
+                    <model-viewer
+                        src="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
+                        auto-rotate camera-controls camera-orbit="0deg 75deg 70%" class="model-viewer" id="mobile">
+                    </model-viewer>
+                    <button class="AR-btn charpstarARViewer" onclick="activateAR(this)"
+                        src="https://charpstar.se/AR.svg" data-desktopqr
+                        data-androidsrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
+                        data-iossrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
+                        <div class="button-content">
+                            <p class="text">Se i Augmented Reality</p>
+                            <p><img src="./view_in_ar.svg" alt="3D" class="icon-3D"></p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="banner-640">
+                <div class="logo"><img src="./plantagen.svg" alt="logo"></div>
+                <div class="banner-640-details">
+                    <model-viewer
+                        src="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
+                        auto-rotate camera-controls camera-orbit="0deg 75deg 60%" class="model-viewer" id="large">
+                    </model-viewer>
+                    <button class="AR-btn charpstarARViewer" onclick="activateAR(this)"
+                        src="https://charpstar.se/AR.svg" data-desktopqr
+                        data-androidsrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
+                        data-iossrc="https://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
+                        <div class="button-content">
+                            <p class="text">Se i Augmented Reality</p>
+                            <p><img src="./view_in_ar.svg" alt="3D" class="icon-3D"></p>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -55,4 +108,5 @@
     <script src="https://cdn.jsdelivr.net/gh/charpstar/InPlace/charpstar-viewer.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
+
 </html>
