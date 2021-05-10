@@ -14,24 +14,43 @@
         <div class="banner-320">
             <div class="logo"><img src="./plantagen.svg" alt="logo"></div>
             <div class="banner-320-details">
-                <h2 class="banner-title">Utelivet börjar nu</h2>
-                    <button class="AR-btn charpstarARViewer" onclick="activateAR(this)" src="https://charpstar.se/AR.svg" data-desktopqr data-androidsrc="http://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb" data-iossrc="http://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
-                    <span>Inspiration för din odling</span> 
-                </button>  
+                <model-viewer
+                src="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
+                auto-rotate
+                camera-controls
+                class="model-viewer"
+                id="mobile"
+              ></model-viewer>
+                <button class="AR-btn charpstarARViewer" onclick="activateAR(this)" src="https://charpstar.se/AR.svg" data-desktopqr data-androidsrc="http://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb" data-iossrc="http://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
+                    <div class="button-content">
+                        <p class="text">Se i Augmented Reality</p> 
+                        <p><img src="./view_in_ar.svg" alt="3D" class="icon-3D"></p> 
+                    </div> 
+                </button>
             </div>
         </div>
         
         <div class="banner-640">
             <div class="logo"><img src="./plantagen.svg" alt="logo"></div>
             <div class="banner-640-details">
-                <h2 class="banner-title">Utelivet börjar nu</h2>
+                <model-viewer
+                src="https://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb"
+                auto-rotate
+                camera-controls
+                class="model-viewer"
+                id="large"
+              ></model-viewer>
                 <button class="AR-btn charpstarARViewer" onclick="activateAR(this)" src="https://charpstar.se/AR.svg" data-desktopqr data-androidsrc="http://charpstar.se/InPlace/Plantagen/NewModels2021/Android/025_Melbourne_Lounge_Set.glb" data-iossrc="http://charpstar.se/InPlace/Plantagen/NewModels2021/iOS/025_Melbourne_Lounge_Set.usdz">
-                    <span>Inspiration för din odling</span> 
+                    <div class="button-content">
+                        <p class="text">Se i Augmented Reality</p> 
+                        <p><img src="./view_in_ar.svg" alt="3D" class="icon-3D"></p> 
+                    </div> 
                 </button>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/charpstar/InPlace/charpstar-viewer.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 </html>

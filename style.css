@@ -14,8 +14,23 @@
     padding: 17px;
 }
 
-.AR-btn span {
-    color: #fff
+.AR-btn .button-content {
+    display: flex;
+    align-items: center;
+}
+
+.AR-btn p {
+    margin: 0
+}
+
+.AR-btn p.text {
+    color: #fff;
+    margin-right: 0.5em;
+} 
+
+.banners {
+    display: flex;
+    justify-content: space-around;
 }
 
 .banner-320-details {
@@ -40,19 +55,29 @@
     align-items: center;
 }
 
-.banner-title {
-    color: white;
-    font-size: 3em;
-    text-align: center; 
-}
-
-.banners {
-    display: flex;
-    justify-content: space-around;
-}
-
 .logo {
     background-color: #ece2d7;
-    text-align: center;
     padding: 1em 0;
+    text-align: center;
+}
+
+.model-viewer{
+    background-color: rgba(236, 226, 215, 0.8);
+    border-radius: 3em;
+    margin-top: 1em;
+}
+
+.model-viewer#large {
+    width: 400px;
+    height: 700px;
+}
+
+.model-viewer#mobile {
+    width: 300px;
+    height: 500px;
+}
+
+.icon-3D {
+    color: wheat;
+    height: 24px;
 }
