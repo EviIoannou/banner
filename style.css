@@ -9,7 +9,7 @@
     font-size: 0.9375rem;
     font-weight: bold;
     line-height: 1rem;
-    margin: 1.5em 0;
+    margin: 1em 0;
     min-width: 208px;
     padding: 10px 17px;
 }
@@ -41,15 +41,10 @@
     background-image: url(https://www.plantagen.se/dw/image/v2/BCMR_PRD/on/demandware.static/-/Library-Sites-PlantagenShared/default/dw15f5228d/gyo-startpage-picture-vers2-sp2-2021-1280x600.jpg?sw=1200);
     background-repeat: no-repeat;
     background-size: 700px 320px;
-    height: 320px;
-    margin-bottom: 2em;
-    width: 320px;
 }
 
 .banner-640-details {
     background-image: url(https://www.plantagen.se/dw/image/v2/BCMR_PRD/on/demandware.static/-/Library-Sites-PlantagenShared/default/dw15f5228d/gyo-startpage-picture-vers2-sp2-2021-1280x600.jpg?sw=1200);
-    height: 320px;
-    width: 640px;
 }
 
 .banner-320-details, .banner-640-details {
@@ -65,13 +60,17 @@
     text-align: center;
 }
 
-.banner-320 .logo {
+.banner-320 {
+    height: 320px;
+    margin-bottom: 2em;
     width: 320px;
 }
 
-.banner-640 .logo {
+.banner-640 {
+    height: 320px;
     width: 640px;
 }
+
 .model-viewer{
     background-color: rgba(236, 226, 215, 0.8);
     border-radius: 3em;
@@ -80,12 +79,7 @@
 
 .model-viewer#large {
     width: 400px;
-    height: 700px;
-}
-
-.model-viewer#mobile {
-    width: 300px;
-    height: 500px;
+    height: 150px;
 }
 
 .icon-3D {
